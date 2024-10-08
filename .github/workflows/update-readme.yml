@@ -27,6 +27,6 @@ jobs:
           # 使用从 Secrets 中读取的 GH_TOKEN
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/SpoonException/WordPress.git
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/SpoonException/WordPress.git
           git push origin main
 
