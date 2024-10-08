@@ -23,5 +23,7 @@ jobs:
           git commit -m "Auto update README with WordPress post links"
 
       - name: Push to GitHub
-        run: git push
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/SpoonException/WordPress.git
+          git push origin HEAD:main
 
