@@ -24,6 +24,5 @@ jobs:
 
       - name: Push changes
         run: |
-          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/SpoonException/WordPress.git
-          git push origin main
+          git push
 
