@@ -22,8 +22,11 @@ jobs:
           git add README.md
           git commit -m "Auto update README with WordPress post links"
 
-      - name: Push to GitHub
-        run: |
-          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/SpoonException/WordPress.git
-          git push origin HEAD:main
+     - name: Set up repository URL
+      run: |
+        git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/SpoonException/WordPress.git
+
+    - name: Push changes
+      run: |
+        git push origin main
 
